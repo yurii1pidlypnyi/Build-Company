@@ -1,1 +1,83 @@
+.header {
 
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 0px;
+    align-items: center;
+  }
+
+  &__logo {
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__menu {
+  }
+
+  &__contacts {
+    display: flex;
+    img{
+      margin-right: 12px;
+    }
+    @media(max-width:1100px){
+      display: none;
+    }
+  }
+}
+.menu {
+
+  &__list {
+    display: flex;
+    margin-left: -113px;
+    @media(max-width:1200px){
+      margin-left: 0px;
+    }
+  }
+
+  &__item {
+    margin-right: 40px;
+    &:last-child{
+      margin-right: 0px;
+    }
+  }
+
+  &__link {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+  }
+}
+.contacts {
+  &__telephone {
+    display: flex;
+  }
+
+  &__information {
+  }
+
+  &__title {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    color: #424551;
+  }
+
+  &__value {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #1E212C;
+  }
+
+  &__email {
+    display: flex;
+    margin-left: 36px;
+  }
+}
