@@ -52,17 +52,11 @@ const styles = () => {
 };
 
 const scripts = () => {
-	src('./src/js/vendor/**.js')
-		.pipe(concat('vendor.js'))
-		.pipe(gulpif(isProd, uglify().on("error", notify.onError())))
-		.pipe(dest('./app/js/'))
-  return src(
-    ['./src/js/global.js', './src/js/components/**.js', './src/js/main.js'])
+  return src('./src/js/main.js')
     .pipe(gulpif(!isProd, sourcemaps.init()))
 		.pipe(babel({
 			presets: ['@babel/env']
 		}))
-    .pipe(concat('main.js'))
     .pipe(gulpif(isProd, uglify().on("error", notify.onError())))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
     .pipe(dest('./app/js'))
