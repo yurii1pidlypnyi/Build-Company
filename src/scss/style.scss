@@ -7,8 +7,10 @@
 // подключения компонентов страницы
 @import "./components/header";
 @import "./components/hero-main";
+@import "./components/about-section";
 // подключения елементов страницы
 @import "./components/button";
+@import "./components/title";
 
 .wrapper {
   min-height: 100%;
