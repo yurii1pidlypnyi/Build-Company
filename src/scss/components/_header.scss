@@ -165,6 +165,10 @@
     font-size: 16px;
     line-height: 160%;
     color: #424551;
+    transition: all 0.4s ease 0s;
+    &:hover{
+      color: #fc3300;
+    }
     @include tablet{
       font-size: 30px;
     }
@@ -189,6 +193,10 @@
     font-size: 18px;
     line-height: 150%;
     color: #1E212C;
+    transition: all 0.4s ease 0s;
+    &:hover{
+      color: #fc3300;
+    }
   }
 
   &__email {
