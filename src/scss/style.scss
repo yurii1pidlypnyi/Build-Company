@@ -12,3 +12,13 @@
   padding: 0 10px;
   margin: 0 auto;
 }
+body{
+  &.lock{
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+  }
+}
