@@ -10,6 +10,24 @@
   }
 }
 
+.title--mini{
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 150%;
+  color: #1E212C;
+  @media(max-width: 600px){
+    font-size: 20px;
+  }
+}
+.title--item{
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 150%;
+  color: #1E212C;
+}
+
 .subtitle-section {
   text-align: center;
   margin: 24px 0px 60px 0px;

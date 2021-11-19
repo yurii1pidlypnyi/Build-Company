@@ -10,10 +10,19 @@
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 20px 40px;
+  transition: all 0.4s ease 0s;
+  &:hover{
+    background-color: #fc3300;
+  }
   &--hero{
     background: transparent;
     border: 1px solid #FFFFFF;
     border-radius: 4px;
+    transition: all 0.4s ease 0s;
+    &:hover{
+      background-color: #FF5A30;
+      border-color: #FF5A30;
+    }
   }
   &--forma{
     font-size: 14px;

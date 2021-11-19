@@ -9,9 +9,11 @@
 @import "./components/hero-main";
 @import "./components/about-section";
 @import "./components/about-mission";
+@import "./components/services-section";
 // подключения елементов страницы
 @import "./components/button";
 @import "./components/title";
+@import "./components/see-more";
 
 .wrapper {
   min-height: 100%;

@@ -47,20 +47,13 @@
 
   &__buttons--about {
     align-self: flex-start;
-    transition: all 0.4s ease 0s;
-    &:hover{
-      background-color: #FF5A30;
-      border-color: #FF5A30;
-    }
   }
 
   &__buttons--request {
     margin-left: 24px;
     align-self: flex-start;
     transition: all 0.4s ease 0s;
-    &:hover{
-      background-color: #fc3300;
-    }
+    
     @media(max-width: 600px){
       margin: 24px 0 0 0 ;
     }
