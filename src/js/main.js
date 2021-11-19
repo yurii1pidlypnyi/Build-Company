@@ -13,7 +13,7 @@ burger.addEventListener('click',()=>{
 let buttonPlay = document.querySelector('.video__play')
 let videoBlock = document.querySelector('.about-section__video')
 let video = document.querySelector('.video__block');
-console.log(video.controls)
+
 buttonPlay.addEventListener('click',()=>{
   videoBlock.classList.toggle('active');
   buttonPlay.classList.toggle('active');
