@@ -13,17 +13,16 @@ burger.addEventListener('click',()=>{
 let buttonPlay = document.querySelector('.video__play')
 let videoBlock = document.querySelector('.about-section__video')
 let video = document.querySelector('.video__block');
-
+console.log(video.controls)
 buttonPlay.addEventListener('click',()=>{
   videoBlock.classList.toggle('active');
   buttonPlay.classList.toggle('active');
   video.play();
   video.controls = true
 })
-video.addEventListener('click',()=>{
+video.onpause = function(){
   videoBlock.classList.toggle('active');
   buttonPlay.classList.toggle('active');
   video.controls = false;
   video.pause()
-})
-//-----------------------
+}
