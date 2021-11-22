@@ -66,6 +66,13 @@
       margin: 0 20px;
       top: 80px;
     }
+    @media(max-width: 600px){
+      position: static;
+      top:0px;
+      left: 0px;
+      padding: 60px 10px 40px;
+      margin: 0 0;
+    }
   }
 
   &__forma--title {
