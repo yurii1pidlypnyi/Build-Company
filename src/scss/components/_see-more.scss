@@ -9,6 +9,7 @@
   }
   &__title {
     margin-right: 40px;
+    align-self: center;
     @media(max-width:600px){
       text-align: center;
       margin-bottom: 20px;

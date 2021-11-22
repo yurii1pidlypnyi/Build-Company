@@ -32,4 +32,13 @@
   @media(max-width: 600px){
     padding: 0px 20px;
   }
+  &--item{
+    background-color: transparent;
+    color: #FF5A30;
+    border: 1px solid #FF5A30;
+    padding: 16px 32px;
+    &:hover{
+      color: #FFFFFF;
+    }
+  }
 }
