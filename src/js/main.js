@@ -26,3 +26,16 @@ video.onpause = function(){
   video.controls = false;
   video.pause()
 }
+//-------------------------
+//Checkbox
+let check = document.querySelector('.agreement');
+let agree = document.querySelector('.details__forma--checkbox');
+
+agree.addEventListener('click', ()=>{
+  if(check.checked){
+    check.checked = false
+  }else{
+    check.checked = true
+  }
+  agree.classList.toggle('active');
+});
