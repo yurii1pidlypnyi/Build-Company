@@ -14,9 +14,6 @@
     }
   }
 
-  &__top--contacts {
-  }
-
   &__top--icon {
     display: flex;
     @include mobile{
@@ -31,9 +28,6 @@
       margin-right: 0;
       margin-bottom: 30px;
     }
-  }
-
-  &__top--social {
   }
 
   &__top--social--icon {
@@ -171,11 +165,7 @@
     }
   }
 }
-/*.navigation--about{
-  @media(max-width:767px) {
-    flex: 0 1 400px;
-  }
-}*/
+
 .footer {
   &__bottom--copyright {
     font-family: 'Ubuntu';
