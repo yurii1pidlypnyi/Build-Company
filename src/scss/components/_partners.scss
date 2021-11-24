@@ -1,0 +1,15 @@
+.partners {
+  background: #F4F5F7;
+  &__body {
+    padding: 80px 0px 100px 0px;
+    @include tablet {
+      padding: 50px 0 50px 0 ;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 60px;
+  }
+}
