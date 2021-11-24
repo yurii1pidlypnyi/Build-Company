@@ -13,32 +13,47 @@
 
   &__way {
     display: flex;
-  }
-
-  &__way--home {
-    font-family: 'Ubuntu';
-    font-weight: 400;
-    font-size: 14px;
-    color: #424551;
-  }
-
-  &__way--page {
-    padding-left: 20px;
-    font-family: 'Ubuntu';
-    font-weight: 400;
-    font-size: 14px;
-    color: #424551;
-    position: relative;
-    &::before {
-      padding-left: 8px;
-      content: '/';
-      position: absolute;
-      left: 0;
-      top: 0;
+    li {
+      padding: 0px 10px;
+      &:first-child {
+        padding-left: 0px;
+      }
+      &:last-child {
+        padding-right: 0px;
+      }
     }
-    &.active {
+    &--page {
+      font-family: 'Ubuntu';
+      font-weight: 400;
+      font-size: 14px;
+      color: #76777c;
+      position: relative;
+      &::after {
+        content: '/';
+        position: absolute;
+        right: -3px;
+        top: 0;
+      }
+    }
+    &--link{
+      font-family: 'Ubuntu';
+      font-weight: 400;
+      font-size: 14px;
+      color: #424551;
+      transition: color 0.4s ease 0s;
+      &:hover {
+        color:#fc3300;
+      }
+      &.active {
+        pointer-events: none;
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 14px;
+        color: #9A9CA5;
+      }
     }
   }
+  
 
   &__title {
     font-family: 'Ubuntu';

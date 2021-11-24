@@ -13,29 +13,32 @@ burger.addEventListener('click',()=>{
 let buttonPlay = document.querySelector('.video__play')
 let videoBlock = document.querySelector('.about-section__video')
 let video = document.querySelector('.video__block');
-
-buttonPlay.addEventListener('click',()=>{
-  videoBlock.classList.toggle('active');
-  buttonPlay.classList.toggle('active');
-  video.play();
-  video.controls = true
-})
-video.onpause = function(){
-  videoBlock.classList.toggle('active');
-  buttonPlay.classList.toggle('active');
-  video.controls = false;
-  video.pause()
+if(buttonPlay){
+  buttonPlay.addEventListener('click',()=>{
+    videoBlock.classList.toggle('active');
+    buttonPlay.classList.toggle('active');
+    video.play();
+    video.controls = true
+  })
+  video.onpause = function(){
+    videoBlock.classList.toggle('active');
+    buttonPlay.classList.toggle('active');
+    video.controls = false;
+    video.pause()
+  }
 }
 //-------------------------
 //Checkbox
 let check = document.querySelector('.agreement');
 let agree = document.querySelector('.details__forma--checkbox');
 
-agree.addEventListener('click', ()=>{
-  if(check.checked){
-    check.checked = false
-  }else{
-    check.checked = true
-  }
-  agree.classList.toggle('active');
-});
+if(agree){
+  agree.addEventListener('click', ()=>{
+    if(check.checked){
+      check.checked = false
+    }else{
+      check.checked = true
+    }
+    agree.classList.toggle('active');
+  });
+}

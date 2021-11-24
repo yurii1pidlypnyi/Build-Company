@@ -36,6 +36,7 @@
     @include mobile{
       max-width: 285px;
     }
+
     &::before{
     content: "";
     position: absolute;
@@ -44,7 +45,6 @@
     width: 100%;
     height: 100%;
     z-index: 3;
-    background: #1E212C url('../img/service-item.jpg') 50%/cover no-repeat;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     }
@@ -62,7 +62,26 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     }
-
+    &--construction{
+      &::before {
+        background: #1E212C url('../img/service/service1.jpg') 50%/cover no-repeat;
+      }
+    }
+    &--development{
+      &::before {
+        background: #1E212C url('../img/service/service2.jpg') 50%/cover no-repeat;
+      }
+    }
+    &--design{
+      &::before {
+        background: #1E212C url('../img/service/service3.jpg') 50%/cover no-repeat;
+      }
+    }
+    &--repairs{
+      &::before {
+        background: #1E212C url('../img/service/service4.jpg') 50%/cover no-repeat;
+      }
+    }
     &:hover{
       &::before{
         opacity: 1;
