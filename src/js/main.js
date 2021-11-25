@@ -42,3 +42,38 @@ if(agree){
     agree.classList.toggle('active');
   });
 }
+//---------------------------
+//Swiper
+
+const worksSlider = document.querySelector('.works-section__list');
+const clientsSlider = document.querySelector('.clients-company__list');
+//Work-section
+if (worksSlider) {
+  const worksSectionSlider = new Swiper(worksSlider, {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.works-section__next',
+      prevEl: '.works-section__prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
+  });
+}
+//Clients-company
+if (worksSlider) {
+  const clientsCompanySlider = new Swiper(clientsSlider, {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.clients-company__next',
+      prevEl: '.clients-company__prev',
+    },
+  });
+}

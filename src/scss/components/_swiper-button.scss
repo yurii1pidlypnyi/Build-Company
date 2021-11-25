@@ -1,0 +1,35 @@
+.slider-nav {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 96px;
+    align-self: flex-end;
+    @media(max-width:600px){
+      align-items: center;
+    }
+  }
+
+.slider-btn {
+  position: relative;
+  z-index: 15;
+  width: 48px;
+  height: 48px;
+  padding: 0px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: all 0.4s ease 0s;
+  &:hover{
+    .nav-icon{
+      fill: #ffffff;
+    }
+    background-color: #FF5A30;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: #424551;
+  }
+}
+.swiper-button-disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}

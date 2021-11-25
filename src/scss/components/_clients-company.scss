@@ -25,6 +25,12 @@
   }
   &__list {
     margin-top: 60px;
+    .slider-nav {
+      justify-content: flex-end;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
   &__photo {
     position: absolute;
