@@ -77,3 +77,39 @@ if (worksSlider) {
     },
   });
 }
+//--------------------------------------
+//Scroll To Top
+const toTop = document.querySelector('.to-top');
+let heroHeight;
+
+if (document.querySelector('.hero')) {
+  heroHeight = document.querySelector('.hero').offsetHeight;
+}
+
+if (document.querySelector('.hero-page')) {
+  heroHeight = document.querySelector('.hero-page').offsetHeight;
+}
+
+const isVisibleToTop = (y = 0) => {
+  if (y >= heroHeight) {
+    toTop.classList.add('to-top--active');
+  } else {
+    toTop.classList.remove('to-top--active');
+  }
+}
+
+isVisibleToTop(window.scrollY);
+
+window.addEventListener('scroll', () => {
+  let y = window.scrollY;
+  isVisibleToTop(y);
+});
+
+toTop.addEventListener('click',()=>{
+  body.scrollIntoView({
+    block: 'start',
+    inline: 'nearest',
+    behavior: 'smooth',
+  })
+  console.log(1);
+})
