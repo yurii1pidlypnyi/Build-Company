@@ -1,9 +1,4 @@
-
 .hero-page {
-  background: #F4F5F6;
-  @media(min-width:769px){
-    background: url('../img/service/service-hero.png') top right/ 975px 600px no-repeat;
-  }
   &__body {
     padding: 156px 0 183px 0;
     @media(max-width: 600px){
@@ -56,6 +51,7 @@
   
 
   &__title {
+    max-width: 600px;
     font-family: 'Ubuntu';
     font-weight: 700;
     font-size: 72px;
@@ -76,3 +72,19 @@
   }
 }
 
+.hero-services-1 {
+  @media(min-width:769px){
+    background: #F4F5F6 url('../img/service/service-1-hero.png') top right/ 975px 100% no-repeat;
+  }
+  &__body {
+    padding: 156px 0 115px 0;
+    @media(max-width: 600px){
+      padding:100px 0px 80px 0px;
+    }
+}
+}
+.hero-services {
+  @media(min-width:769px){
+    background:#F4F5F6 url('../img/service/service-hero.png') top right/ 975px 100% no-repeat;
+  }
+}
