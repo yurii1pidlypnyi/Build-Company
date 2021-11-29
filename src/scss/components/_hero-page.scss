@@ -101,3 +101,8 @@
     background: #ffffff url('../img/work/work-1-hero.png') top right/ 854px 822px no-repeat;
   }
 }
+.hero-positions {
+  @media(min-width:769px){
+    background:#F4F5F6 url('../img/positions-hero.png') bottom right/ 1014px 506px no-repeat;
+  }
+}

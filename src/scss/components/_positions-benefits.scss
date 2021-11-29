@@ -1,0 +1,54 @@
+.positions-benefits {
+
+  &__body {
+    padding: 180px 0 180px 0;
+    @include tablet{
+      padding: 60px 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 600px){
+      display: block;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    text-align: center;
+    border-right: 1px solid rgba(218, 219, 221, 0.5);
+    @media(max-width: 600px){
+      margin-bottom: 10px;
+      border: none;
+    }
+    &:last-child{
+      border: none;
+    }
+    &--container {
+      max-width: 285px;
+      margin: 0 auto;
+      padding: 0px 10px;
+    }
+    &--icon {
+      svg{
+        width: 48px;
+        height: 48px;
+      }
+    }
+    &--title {
+      margin: 24px 0px 8px 0px;
+      text-align: center;
+    }
+  
+    &--text {
+      font-family: 'Ubuntu';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      text-align: center;
+      color: #787A80;
+    }
+  }
+}
