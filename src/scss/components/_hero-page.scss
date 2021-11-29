@@ -95,3 +95,9 @@
     background:#F4F5F6 url('../img/work/work-hero.png') top right/ 975px 100% no-repeat;
   }
 }
+.hero-work1 {
+  background: #ffffff;
+  @media(min-width:769px){
+    background: #ffffff url('../img/work/work-1-hero.png') top right/ 854px 822px no-repeat;
+  }
+}

@@ -48,6 +48,7 @@ if(agree){
 const worksSlider = document.querySelector('.works-section__list');
 const clientsSlider = document.querySelector('.clients-company__list');
 const relatedSlider = document.querySelector('.related-projects__list');
+const similarSlider = document.querySelector('.similar-projects__list');
 //Work-section
 if (worksSlider) {
   const worksSectionSlider = new Swiper(worksSlider, {
@@ -86,6 +87,25 @@ if (relatedSlider) {
     navigation: {
       nextEl: '.related-projects__next',
       prevEl: '.related-projects__prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2
+      },
+      768: {
+        slidesPerView: 3,
+      }
+    }
+  });
+}
+//Similar Projects
+if (similarSlider) {
+  const similarProjectsSlider = new Swiper(similarSlider, {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    navigation: {
+      nextEl: '.similar-projects__next',
+      prevEl: '.similar-projects__prev',
     },
     breakpoints: {
       576: {
