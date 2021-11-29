@@ -68,7 +68,7 @@ if (worksSlider) {
   });
 }
 //Clients-company
-if (worksSlider) {
+if (clientsSlider) {
   const clientsCompanySlider = new Swiper(clientsSlider, {
     slidesPerView: 1,
     spaceBetween: 0,
