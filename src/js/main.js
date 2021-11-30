@@ -159,27 +159,46 @@ let modalSubs = document.querySelector('.modal-subs');
 let modalCv = document.querySelector('.modal-cv');
 let exitModal = document.querySelectorAll('.exit-modal');
 
-[...exitModal].forEach(item => {
-  item.addEventListener('click', ()=>{
-    if(modalSubs.classList.contains('active')){
-      modalSubs.classList.toggle('active');
-    }
-    if(modalCv.classList.contains('active')){
-      modalCv.classList.toggle('active');
-    }
-    body.classList.toggle('lock')
+if(exitModal){
+  [...exitModal].forEach(item => {
+    item.addEventListener('click', ()=>{
+      if(modalSubs.classList.contains('active')){
+        modalSubs.classList.toggle('active');
+      }
+      if(modalCv.classList.contains('active')){
+        modalCv.classList.toggle('active');
+      }
+      body.classList.toggle('lock')
+      toTop.classList.toggle('modal');
+    })
+  });
+}
+
+if(subscribe){
+  subscribe.addEventListener('click', ()=>{
+    modalSubs.classList.toggle('active');
+    body.classList.toggle('lock');
     toTop.classList.toggle('modal');
   })
-});
+}
 
-subscribe.addEventListener('click', ()=>{
-  modalSubs.classList.toggle('active');
-  body.classList.toggle('lock');
-  toTop.classList.toggle('modal');
-})
+if(sendCv){
+  sendCv.addEventListener('click', ()=>{
+    modalCv.classList.toggle('active');
+    body.classList.toggle('lock');
+    toTop.classList.toggle('modal');
+  })
+}
+//------------------------------
+//Spoiler
+let spoilerButton = document.querySelectorAll('.service-offers__item--title');
+let spoilerText = document.querySelector('.service-offers__item--text');
 
-sendCv.addEventListener('click', ()=>{
-  modalCv.classList.toggle('active');
-  body.classList.toggle('lock');
-  toTop.classList.toggle('modal');
-})
+if(spoilerButton){
+  [...spoilerButton].forEach(item => {
+    item.addEventListener('click', ()=>{
+      item.classList.toggle('active');
+      item.nextElementSibling.classList.toggle('active');
+    })
+  });
+}
