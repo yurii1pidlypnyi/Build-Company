@@ -151,5 +151,35 @@ toTop.addEventListener('click',()=>{
     inline: 'nearest',
     behavior: 'smooth',
   })
-  console.log(1);
+})
+//Modal POPUP
+let subscribe = document.querySelector('.vacancies__menu--subscribe');
+let sendCv = document.querySelector('.vacancies__menu--send');
+let modalSubs = document.querySelector('.modal-subs');
+let modalCv = document.querySelector('.modal-cv');
+let exitModal = document.querySelectorAll('.exit-modal');
+
+[...exitModal].forEach(item => {
+  item.addEventListener('click', ()=>{
+    if(modalSubs.classList.contains('active')){
+      modalSubs.classList.toggle('active');
+    }
+    if(modalCv.classList.contains('active')){
+      modalCv.classList.toggle('active');
+    }
+    body.classList.toggle('lock')
+    toTop.classList.toggle('modal');
+  })
+});
+
+subscribe.addEventListener('click', ()=>{
+  modalSubs.classList.toggle('active');
+  body.classList.toggle('lock');
+  toTop.classList.toggle('modal');
+})
+
+sendCv.addEventListener('click', ()=>{
+  modalCv.classList.toggle('active');
+  body.classList.toggle('lock');
+  toTop.classList.toggle('modal');
 })

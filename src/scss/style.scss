@@ -35,6 +35,7 @@
 @import "./components/see-more";
 @import "./components/swiper-button";
 @import "./components/to-top";
+@import "./components/modal-popup";
 
 .wrapper {
   min-height: 100%;
@@ -48,7 +49,7 @@
 }
 body{
   &.lock{
-  position: fixed;
+  position: absolute;
   height: 100%;
   overflow: hidden;
   width: 100%;

@@ -34,4 +34,7 @@ transition: opacity .3s ease-in-out,visibility .3s ease-in-out;
     align-items: center;
     justify-content: center;
   }
+  &.modal{
+    display: none;
+  }
 }
