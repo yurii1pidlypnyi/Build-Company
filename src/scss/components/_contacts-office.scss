@@ -1,0 +1,92 @@
+.contacts-office {
+
+  &__body {
+    padding:80px 0 120px;
+    @media(max-width:600px){
+      padding:60px 0;
+    }
+  }
+
+ &__list {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 760px){
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+    border-right: 1px solid rgba(218, 219, 221, 0.5);
+    @media(max-width: 760px){
+      margin-bottom: 30px;
+      border: none;
+    }
+    @media(max-width: 600px){
+      flex: 0 1 100%;
+    }
+    &:last-child{
+      border: none;
+    }
+    &--container {
+      max-width: 270px;
+      margin: 0 auto;
+      padding: 0px 10px;
+      @media(max-width: 760px){
+        width: 100%;
+      }
+    }
+  }
+
+  &__item--addres {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1E212C;
+    margin: 24px 0 4px;
+  }
+
+  &__information {
+    margin-top: 20px;
+    li {
+      display: flex;
+      margin-bottom: 4px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__information--title {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #787A80;
+    margin-right: 4px;
+  }
+
+  &__information--text {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1E212C;
+  }
+}
+.container {
+}
+.title--section {
+}
+.subtitle--section {
+}
+.google-maps {
+  font-family: 'Ubuntu';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  text-decoration-line: underline;
+  color: #FF5A30;
+}

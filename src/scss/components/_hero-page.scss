@@ -106,3 +106,8 @@
     background:#F4F5F6 url('../img/positions-hero.png') bottom right/ 1014px 506px no-repeat;
   }
 }
+.hero-contacts {
+  @media(min-width:769px){
+    background:#F4F5F6 url('../img/hero-contacts.png') bottom right/ 1080px 600px no-repeat;
+  }
+}

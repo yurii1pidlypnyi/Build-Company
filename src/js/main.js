@@ -283,22 +283,22 @@ function loadingItems(colections){
     loadMore.style.display = 'block';
   }
 }
-
-console.log(activeColections[8].classList.contains('visible'));
-
-loadMore.addEventListener('click',()=>{
-  let index = 0;
-  for(let i = 0; i<activeColections.length;i++){
-    if(activeColections[i].classList.contains('visible')!==true){
-      index = i;
-      break
+if(loadMore){
+  loadMore.addEventListener('click',()=>{
+    let index = 0;
+    for(let i = 0; i<activeColections.length;i++){
+      if(activeColections[i].classList.contains('visible')!==true){
+        index = i;
+        break
+      }
     }
-  }
-  for(let i =index; i<index*2; i++){
-    if(!(activeColections[i])){
-      loadMore.style.display = 'none';
-      break
+    for(let i =index; i<index*2; i++){
+      if(!(activeColections[i])){
+        loadMore.style.display = 'none';
+        break
+      }
+      activeColections[i].classList.add('visible')
     }
-    activeColections[i].classList.add('visible')
-  }
-})
+  })
+  
+}
