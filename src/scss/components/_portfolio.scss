@@ -38,6 +38,7 @@
     background: #FFFFFF;
     box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
     border-radius: 4px;
+    cursor: pointer;
     @media(max-width:1200px){
       margin-bottom: 30px;
 /*      &:last-child {
@@ -78,6 +79,9 @@
 .portfolio {
 
   &__works {
+    &:nth-child(n+10){
+      display: none;
+    }
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
@@ -90,11 +94,27 @@
   }
 
   &__cell {
-    display: flex;
+    display: none;
     flex-direction: column;
     background: #FFFFFF;
     box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
     border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    @media(min-width:1440px){
+      overflow: hidden;
+      &:hover{
+        .portfolio__cell--text{
+          transform: translate(0,-68px);
+        }
+        .portfolio__cell--button{
+          display: block;
+        }
+      }
+    }
+    &.visible{
+      display: flex;
+    }
   }
 
   &__cell--img {
@@ -115,6 +135,9 @@
     flex-direction: column;
     align-items: center;
     padding: 16px 20px 24px;
+    position: relative;
+    background: #ffffff;
+    transition: transform 1s ease 0s;
   }
 
   &__cell--title {
@@ -123,6 +146,13 @@
 
   &__cell--button {
     margin-top: 24px;
+    @media(min-width:1440px){
+      display: none;
+      position: absolute;
+      left: 50%;
+      bottom: -54px;
+      transform: translate(-50% , 0);
+    }
   }
   &__more {
     font-family: 'Ubuntu';
@@ -132,6 +162,7 @@
     color: #424551;
     text-align: center;
     margin-top: 60px;
+    cursor: pointer;
     span {
       position: relative;
       padding-left: 40px;

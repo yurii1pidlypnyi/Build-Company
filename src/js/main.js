@@ -233,3 +233,72 @@ if(spoilerButton){
     })
   });
 }
+//----------------------------------
+//Tabs portfolio
+
+let tabsNav = document.querySelectorAll('.portfolio__item');
+let cellItem = document.querySelectorAll('.portfolio__cell');
+let loadMore = document.querySelector('.portfolio__more');
+let activeColections = [...cellItem];
+
+if(tabsNav){
+  [...tabsNav].forEach(item => {
+    item.addEventListener('click', function(){tabNavigation(item)})
+  });
+}
+
+function tabNavigation(menu) {
+  [...tabsNav].forEach(element => {
+    element.classList.remove('active')
+  });
+  menu.classList.toggle('active');
+  portfolioCell(menu.dataset.path)
+}
+
+
+function portfolioCell(path){
+  [...cellItem].forEach(element => {
+    element.classList.remove('visible')
+  });
+  if(path !== 'all'){
+    loadingItems([...document.querySelectorAll(`[data-target="${path}"]`)]);
+  }else{
+    loadingItems(cellItem);
+  }
+}
+
+function loadingItems(colections){
+  if(colections.length<=9){
+    activeColections=colections;
+    colections.forEach(item => {
+      item.classList.add('visible')
+    });
+    loadMore.style.display = 'none';
+  }
+  else{
+    activeColections=colections;
+    for(let i =0; i<9; i++){
+      [...colections][i].classList.add('visible')
+    }
+    loadMore.style.display = 'block';
+  }
+}
+
+console.log(activeColections[8].classList.contains('visible'));
+
+loadMore.addEventListener('click',()=>{
+  let index = 0;
+  for(let i = 0; i<activeColections.length;i++){
+    if(activeColections[i].classList.contains('visible')!==true){
+      index = i;
+      break
+    }
+  }
+  for(let i =index; i<index*2; i++){
+    if(!(activeColections[i])){
+      loadMore.style.display = 'none';
+      break
+    }
+    activeColections[i].classList.add('visible')
+  }
+})
