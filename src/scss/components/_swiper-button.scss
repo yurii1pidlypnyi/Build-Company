@@ -28,6 +28,25 @@
     height: 24px;
     fill: #424551;
   }
+  &__work-images{
+    &--prev {
+      position: absolute;
+      left: 32px;
+      top: 50%;
+      z-index: 50;
+      background-color: rgba(#fff, 0.5);
+      transform: translateY(-50%);
+    }
+  
+    &--next {
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      z-index: 50;
+      background-color: rgba(#fff, 0.5);
+      transform: translateY(-50%);
+    }
+  }
 }
 .swiper-button-disabled {
   opacity: 0.6;
