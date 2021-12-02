@@ -31,6 +31,7 @@ if(buttonPlay){
 //Checkbox
 let check = document.querySelector('.agreement');
 let agree = document.querySelector('.details__forma--checkbox');
+let agree1 = document.querySelector('.contact-us__forma--checkbox');
 
 if(agree){
   agree.addEventListener('click', ()=>{
@@ -42,6 +43,28 @@ if(agree){
     agree.classList.toggle('active');
   });
 }
+if(agree1){
+  agree1.addEventListener('click', ()=>{
+    if(check.checked){
+      check.checked = false
+    }else{
+      check.checked = true
+    }
+    agree1.classList.toggle('active');
+  });
+}
+//Radio Button
+let radioItems = document.querySelectorAll('.contact-us__forma--radio--element');
+
+[...radioItems].forEach(item => {
+  item.addEventListener('click',()=>{
+    [...radioItems].forEach(element => {
+      element.classList.remove('active')
+    });
+    item.classList.add('active');
+    item.querySelector('.radio-contact').checked= true;
+  })
+});
 //---------------------------
 //Swiper
 

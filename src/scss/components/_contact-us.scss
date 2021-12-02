@@ -1,0 +1,224 @@
+.contact-us {
+
+  &__body {
+    padding: 120px 0px;
+    @media(max-width:600px){
+      padding: 60px 0px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width:767px){
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding: 0 40.5% 0 0;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    @media(max-width:767px){
+      padding: 0 0 100% 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__forma{
+    &--body {
+      flex: 0 1 600px;
+      margin-left: 20px;
+      @media(max-width:767px){
+        margin-left: 0px;
+      }
+    }
+    &--top {
+      display: flex;
+      justify-content: space-between;
+      @media(max-width:420px){
+        flex-direction: column;
+      }
+    }
+    &--column {
+      flex: 0 1 285px;
+      margin-left: 10px;
+      &:first-child {
+        margin-left: 0px;
+      }
+      @media(max-width:420px){
+        margin-left: 0px;
+      }
+    }
+    &--input {
+      margin-bottom: 24px;
+      input {
+        width: 100%;
+        background: #F4F5F7;
+        padding: 12px 0px 16px 12px;
+        border: 1px solid #D7DADD;
+        border-radius: 4px;
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    &--caption {
+      font-family: 'Ubuntu';
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #424551;
+      margin-bottom: 8px;
+    }
+    &--select {
+      margin-bottom: 24px;
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 45px;
+        right: 14px;
+        width: 16px;
+        height: 16px;
+        background: url('../img/select.png');
+        pointer-events: none;
+      }
+      select {
+        appearance: none;
+        background: #F4F5F7;
+        border: 1px solid #D7DADD;
+        width: 100%;
+        padding: 12px 0px 16px 12px;
+        border-radius: 4px;
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        cursor: pointer;
+        .placeholder {
+          color: #9A9CA5;
+        }
+      }
+    }
+    &--radio-row {
+      display: flex;
+      max-width: 260px;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    &--radio--element {
+      position: relative;
+      padding-left: 28px;
+      font-family: 'Ubuntu';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #424551;
+      cursor: pointer;
+      margin-right: 5px;
+      &:last-child{
+        margin-right: 0px;
+      }
+      @media(max-width:1000px){
+        padding-left: 20px;
+      }
+      &::before,
+      &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        border-radius: 50%;
+      }
+      &::before {
+        
+        top: 5px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background: transparent;
+        border: 1px solid #B3B7BC;
+        border-radius: 50% ;
+      }
+      &::after{
+        top: 9px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        background-color: #FF5A30;
+        opacity: 0;
+        transition: opacity 0.4s ease 0s;
+      }
+      &.active{
+        &::after{
+          opacity: 1;
+        }
+      }
+      input {
+        display: none;
+      }
+    }
+    &--textarea {
+      textarea {
+        width: 100%;
+        height: 128px;
+        resize: none;
+        padding: 12px 12px 0px;
+        background: #F4F5F7;
+        border: 1px solid #D7DADD;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-family: 'Ubuntu';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+      }
+    }
+    &--bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+      @media(max-width:1100px){
+        flex-direction: column;
+      }
+    }
+    &--checkbox{
+      flex: 0 1 315px;
+      @media(max-width:1100px){
+        flex: 0 1 auto;
+        margin-bottom: 24px;
+      }
+    }
+    &--button{
+      @media(max-width:1100px){
+        align-self: center;
+      }
+    }
+  }
+  
+  &__button {
+    background: #FF5A30;
+    border-radius: 4px;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    transition: all 0.4s ease 0s;
+    &:hover{
+      background: #fc3300;
+    }
+  }
+}
+

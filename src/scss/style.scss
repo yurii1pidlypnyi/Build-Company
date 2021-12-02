@@ -31,6 +31,8 @@
 @import "./components/vacancies";
 @import "./components/hero-work1";
 @import "./components/contacts-office";
+@import "./components/_find-us.scss";
+@import "./components/contact-us";
 // подключения елементов страницы
 @import "./components/button";
 @import "./components/title";
@@ -38,6 +40,7 @@
 @import "./components/swiper-button";
 @import "./components/to-top";
 @import "./components/modal-popup";
+@import "./components/checkbox";
 
 .wrapper {
   min-height: 100%;
