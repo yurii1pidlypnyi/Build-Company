@@ -142,7 +142,7 @@ if (similarSlider) {
     }
   });
 }
-//Hero work-1 2swipers
+//Hero work-1 twoswipers
 const workImages = document.querySelector('.work-images-slider');
 
 if (workImages) {
@@ -326,4 +326,20 @@ if(loadMore){
     }
   })
   
+}
+
+//Tabs news
+
+let newsNav = document.querySelectorAll('.news-page__tab');
+let newsNavActive = document.querySelector('.news-page__tab.active');
+
+console.log(newsNavActive);
+
+if(newsNav){
+  [...newsNav].forEach(item => {
+    item.addEventListener('click', ()=>{
+      document.querySelector('.news-page__tab.active').classList.remove('active')
+      item.classList.toggle('active');
+    })
+  });
 }

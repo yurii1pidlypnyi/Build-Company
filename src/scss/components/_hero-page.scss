@@ -108,6 +108,11 @@
 }
 .hero-contacts {
   @media(min-width:769px){
-    background:#F4F5F6 url('../img/hero-contacts.png') bottom right/ 1080px 600px no-repeat;
+    background:#F4F5F6 url('../img/hero-contacts.png') bottom right/ 900px 600px no-repeat;
+  }
+}
+.hero-news {
+  @media(min-width:769px){
+    background:#F4F5F6 url('../img/hero-news.png') bottom right/ 1080px 600px no-repeat;
   }
 }
