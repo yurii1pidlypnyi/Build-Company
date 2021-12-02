@@ -55,16 +55,18 @@ if(agree1){
 }
 //Radio Button
 let radioItems = document.querySelectorAll('.contact-us__forma--radio--element');
+if(radioItems){
+  [...radioItems].forEach(item => {
+    item.addEventListener('click',()=>{
+      [...radioItems].forEach(element => {
+        element.classList.remove('active')
+      });
+      item.classList.add('active');
+      item.querySelector('.radio-contact').checked= true;
+    })
+  });
+}
 
-[...radioItems].forEach(item => {
-  item.addEventListener('click',()=>{
-    [...radioItems].forEach(element => {
-      element.classList.remove('active')
-    });
-    item.classList.add('active');
-    item.querySelector('.radio-contact').checked= true;
-  })
-});
 //---------------------------
 //Swiper
 

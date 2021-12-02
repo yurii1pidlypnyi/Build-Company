@@ -1,0 +1,94 @@
+.hero-news-post {
+
+  &__title {
+    margin: 40px 0 48px;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #1E212C;
+    @media(max-width: 600px){
+      font-size: 36px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    @media(max-width:500px){
+      flex-direction: column;
+    }
+  }
+
+  &__information {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    @media(max-width:400px){
+      flex-direction: column;
+      align-items: center;
+    }
+    span {
+      @media(max-width:500px){
+        display: none;
+      }
+    }
+  }
+
+  &__information--thema {
+    color: #FF5A30;
+    @media(max-width:400px){
+      margin-bottom: 10px;
+    }
+  }
+  &__information--data,
+  &__information--comments{
+    position: relative;
+    padding-left: 24px;
+    color: #787A80;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__information--data {
+    &::before{
+      background: url('../img/clock-20px.png') no-repeat;
+    }
+    @media(max-width:400px){
+      margin-bottom: 10px;
+  }
+  }
+  &__information--comments {
+    &::before{
+      background: url('../img/comments.png');
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+    width: 96px;
+    @media(max-width:500px){
+      margin: 20px auto 0;
+    }
+  }
+
+  &__social--icon {
+    width: 24px;
+    height: 24px;
+    fill: #787A80;
+    transition: all 0.4s ease 0s;
+    &:hover {
+      fill: #FF5A30;
+    }
+  }
+}

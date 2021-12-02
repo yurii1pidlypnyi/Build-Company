@@ -33,6 +33,11 @@
 @import "./components/contacts-office";
 @import "./components/_find-us.scss";
 @import "./components/contact-us";
+@import "./components/hero-news-post";
+@import "./components/article";
+@import "./components/post-comments";
+@import "./components/post-forma";
+
 // подключения елементов страницы
 @import "./components/button";
 @import "./components/title";
@@ -51,6 +56,10 @@
   max-width: 1250px;
   padding: 0 10px;
   margin: 0 auto;
+  &__article{
+    max-width: 810px;
+    margin: 0 auto;  
+  }
 }
 body{
   &.lock{

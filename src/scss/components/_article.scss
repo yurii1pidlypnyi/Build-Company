@@ -1,0 +1,124 @@
+.article {
+
+  &__body {
+    padding:0 0 80px 0;
+    @media(max-width:600px){
+      padding:60px 0;
+    }
+  }
+
+  &__img {
+    position: relative;
+    padding: 0 0 40.5% 0;
+    top: -80px;
+    @media(max-width:600px){
+      top: 0;
+      margin-bottom: 60px;
+    }
+    img{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  &__text--bold,
+  &__text--braces {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: #1E212C;
+    margin-bottom: 24px;
+    @media(max-width:600px){
+      font-size: 16px;
+    }
+  }
+
+  &__text--norm {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+    margin-bottom: 24px;
+    &:last-child {
+      margin-bottom: 60px;
+    }
+    @media(max-width:600px){
+      font-size: 14px;
+    }
+  }
+
+  &__text--braces {
+    position: relative;
+    padding-left: 58px;
+    margin: 48px 0px;
+    &::before {
+      content: '';
+      width: 28px;
+      height: 20px;
+      position: absolute;
+      display: block;
+      left:0;
+      top: 0;
+      background: url('../img/brackets.png');
+    }
+  }
+
+  &__text--list {
+    margin-bottom: 24px;
+    li {
+      position: relative;
+      font-family: 'Ubuntu';
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: #424551;
+      padding-left: 32px;
+      &::before {
+        content: '';
+        width: 16px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 5px;
+        background: url('../img/work/decision-check.png')0 0 / 16px 16px;
+      }
+    }
+  }
+
+  &__divide {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1E212C;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: space-between;
+    width: 96px;
+    margin-left: 12px;
+  }
+
+  &__social--icon {
+    width: 20px;
+    height: 20px;
+    fill: #787A80;
+    position: relative;
+    top: 50%;
+    transform: translate(0 , -50%);
+    transition: all 0.4s ease 0s;
+    &:hover {
+      fill: #FF5A30;
+    }
+  }
+}
