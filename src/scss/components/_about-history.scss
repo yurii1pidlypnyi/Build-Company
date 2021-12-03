@@ -1,0 +1,121 @@
+.history {
+  background: #F4F5F7;
+  &__body {
+    padding-bottom: 100px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    position: relative;
+    top: 20px;
+    flex: 0 1 84px;
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    @media(max-width:767px){
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    flex: 0 1 75%;
+  }
+
+  &__item--img {
+    position: relative;
+    padding: 0 0 49% 0;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item--description {
+    margin-top: 36px;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+  }
+  .swiper-container {
+    margin: 0;
+  }
+}
+.history-nav {
+  flex: 0 1 250px;
+  border-left: 1px solid rgba(#9A9CA5,0.5);
+  align-self: flex-start;
+  margin-right: 15px;
+  
+  @media(max-width:767px){
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 38px;
+    cursor: pointer;
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: #9A9CA5;
+    transition: all 0.4s ease 0s;
+
+    &::after{
+      content: '';
+      width: 8px;
+      height: 8px;
+      display: block;
+      position: absolute;
+      left: -5px;
+      top: 50%;
+      transform: translate(0,-50%);
+      border-radius: 50%;
+      background: #9A9CA5;
+      transition: all 0.4s ease 0s;
+    }
+
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      left: -9px;
+      top: 50%;
+      transform: translate(0,-50%);
+      border-radius: 50%;
+      background: #F4F5F7;
+    }
+
+    &.active {
+      color:#FF5A30;
+      &::after{
+        background: #FF5A30;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    @media(max-width:1024px){
+      font-size: 23px;
+    }
+  }
+}
+

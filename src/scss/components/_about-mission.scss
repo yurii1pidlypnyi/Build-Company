@@ -35,6 +35,7 @@
       svg{
         width: 48px;
         height: 48px;
+        fill: #FF5A30;
       }
     }
     &--title {
@@ -49,6 +50,16 @@
       line-height: 160%;
       text-align: center;
       color: #787A80;
+    }
+  }
+}
+
+.about-pg-mission{
+  background: #F4F5F7;
+  &__body{
+    padding: 80px 0px 180px;
+    @media(max-width:600px){
+      padding: 60px 0px;
     }
   }
 }
