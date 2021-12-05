@@ -24,14 +24,12 @@
 
   &__item {
     position: relative;
-    @media(min-width:1024){
-      &:hover {
-        .team__social{
-          opacity: 1;
-          visibility: visible;
-        }
-    }
-    }
+    &:hover {
+      .team__social {
+        opacity: 1;
+        visibility: visible;
+      }
+  }
   }
 
   &__img {
@@ -54,7 +52,7 @@
     width: 100%;
     background:rgba(#FF5A30, 0.7);
     padding: 20px 0;
-    transition: opacity 0.5s ease 0s;
+    transition: opacity 0.8s ease 0s;
     &--container{
       display: flex;
       justify-content: space-between;
@@ -63,7 +61,7 @@
     }
     @media(min-width:1024px){
       opacity: 0;
-      visibility: hidden;  
+      visibility: hidden;
     }
   }
 

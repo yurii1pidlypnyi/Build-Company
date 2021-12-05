@@ -1,6 +1,6 @@
 .news-page {
   &__body {
-    padding: 120px 0 180px;
+    padding: 120px 0 120px;
     @media(max-width:600px){
       padding: 60px 0;
     }
@@ -27,6 +27,7 @@
     padding: 10px 0;
     border: 1px solid transparent;
     border-radius: 4px;
+    cursor: pointer;
     transition: all 0.4s ease 0s;
     &:first-child{
       margin-left: 0px;
@@ -50,6 +51,12 @@
     @media(max-width:750px){
       grid-template-columns: repeat(1, 1fr);
     }
+    .news__item {
+      display: none;
+      &.visible{
+        display: block;
+      }
+    }
   }
 
   &__item--img {
@@ -65,3 +72,46 @@
     }
   }
 }
+
+
+.news-page {
+
+  &__navigation {
+    display: flex;
+    max-width: 144px;
+    justify-content: space-around;
+    margin: 60px auto 0px;
+  }
+  &__page {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: #424551;
+    cursor: pointer;
+    &.active {
+      color: #FF5A30;
+    }
+  }
+  &__arrow {
+    align-self: center;
+    cursor: pointer;
+    &--left {
+      visibility: hidden;
+      transform:rotate(180deg);
+      align-self: center;
+      position:relative;
+      top:-2px;
+    }
+    &--right {
+      visibility: hidden;
+    }
+  }
+}
+
+/*
+          <div class="news-page__page active">1</div>
+          <div class="news-page__page">2</div>
+          <div class="news-page__page">3</div>
+          <div class="news-page__page">4</div>
+*/
