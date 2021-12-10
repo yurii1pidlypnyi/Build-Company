@@ -24,6 +24,7 @@
     border: 1px solid #E5E8ED;
     box-sizing: border-box;
     border-radius: 4px;
+    transition: all 0.5s ease 0s;
     &:last-child{
       margin-bottom: 0;
     }

@@ -469,4 +469,150 @@ function switchPage(item) {
     behavior: 'smooth',
   })
 }
+//Модули плавного відкриття та закриття обєкта
+let _slideUp = (target, duration = 500) => {
+  if (!target.classList.contains('_slide')) {
+    target.classList.add('_slide');
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = target.offsetHeight + 'px';
+    target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(() => {
+      target.hidden = true;
+      target.style.removeProperty('height');
+      target.style.removeProperty('padding-top');
+      target.style.removeProperty('padding-bottom');
+      target.style.removeProperty('margin-top');
+      target.style.removeProperty('margin-bottom');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      target.classList.remove('_slide');
+    }, duration);
+  }
+}
+ let _slideDown = (target, duration = 500) => {
+  if (!target.classList.contains('_slide')) {
+    target.classList.add('_slide');
+    if (target.hidden) {
+      target.hidden = false;
+    }
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout(() => {
+      target.style.removeProperty('height');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      target.classList.remove('_slide');
+    }, duration);
+  }
+}
+ let _slideToggle = (target, duration = 500) => {
+  if (target.hidden) {
+    return _slideDown(target, duration);
+  } else {
+    return _slideUp(target, duration);
+  }
+}
+//------------------------------------------------------------------
+//Select
+let selectItems = [...document.querySelectorAll('.select')];
+if(selectItems){
+  selectItems.forEach(item =>{
+    item.before(select(item));
+    })
+  let selectBody = [...document.querySelectorAll('.select__body')];
+  selectBody.forEach(item=>{
+    item.addEventListener('click', ()=>{
+      item.classList.toggle('active')
+    })
+    let options = [...item.querySelectorAll('.select__option')]
+    changeOption(item, options);
+  })
+  
+}
 
+//----------------------Створення оболочки select
+function select(item){
+  let selectBody = document.createElement('div')
+  selectBody.classList.add('select__body')
+  
+  let selectValue = document.createElement('button')
+  selectValue.classList.add('select__value')
+  selectValue.type = 'button';
+  
+  let selectOptions = document.createElement('div');
+  selectOptions.classList.add('select__options');
+
+  selectBody.append(selectValue);
+  selectBody.append(selectOptions);
+  [...item.options].forEach(item => {
+    let selectOption = document.createElement('button')
+    selectOption.type = 'button'
+    selectOption.textContent = item.label;
+    selectOption.classList.add('select__option');
+    selectOptions.append(selectOption);
+    if(item.classList.contains('placeholder')){
+      selectValue.textContent = item.label;
+      selectOption.classList.add('placeholder');
+      selectValue.style.color = '#9A9CA5'
+    }
+  }
+  );
+  return selectBody
+}
+//----------------------Зміна значень
+function changeOption(select,options){
+options.forEach(item=>{
+  item.addEventListener('click',()=>{
+    select.querySelector('.select__value').textContent = item.textContent;
+    select.querySelector('.select__value').style.color = '#1E212C'
+    if(item.classList.contains('placeholder')){
+      select.querySelector('.select__value').textContent = item.textContent;
+      select.querySelector('.select__value').style.color = '#9A9CA5'
+    }
+    select.nextElementSibling.value = item.textContent
+    if(!(select.nextElementSibling.value == item.textContent)){
+      select.nextElementSibling.value = 0;
+    }
+  })
+})
+}
+//---------------------------------------------------------------------------------
+//Input file
+let file = document.querySelector('.file');
+let inputFile = document.querySelector('.input-file');
+
+if(inputFile){
+  inputFile.addEventListener('change',()=>{
+    if(inputFile.files.length==1){
+      if(inputFile.files[0].name.length>15){
+        file.textContent = inputFile.files[0].name.slice(0,6)+'...'+inputFile.files[0].name.slice(-8)
+      }else{
+        file.textContent = inputFile.files[0].name
+      }
+    }else{
+      file.textContent = 'Attach your CV*'
+    }
+  })
+}

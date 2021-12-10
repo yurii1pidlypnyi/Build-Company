@@ -43,6 +43,8 @@
 @import "./components/about-teams";
 @import "./components/world";
 @import "./components/about-history";
+@import "./components/slider-projects";
+
 // подключения елементов страницы
 @import "./components/button";
 @import "./components/title";
@@ -51,6 +53,7 @@
 @import "./components/to-top";
 @import "./components/modal-popup";
 @import "./components/checkbox";
+@import "./components/select";
 
 .wrapper {
   min-height: 100%;
